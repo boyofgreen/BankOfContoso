@@ -1,18 +1,14 @@
-<div class="row alerts-container" data-ng-controller="AlertsCtrl" data-ng-show="alerts.length">
-  <div class="col-xs-12">
-    <alert data-ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
-  </div>
-</div>
+
 
 <div class="row">
 	<div class="col-lg-3 col-md-6 col-xs-12">
 		<rd-widget>
 			<rd-widget-body>
 				<div class="widget-icon green pull-left">
-					<i class="fa fa-users"></i>
-				</div>
+					<i class="fa fa-money"></i>
+				</div><a href="#/#accountblock">
 				<div class="title">5</div>
-				<div class="comment">Accounts</div>
+				<div class="comment">Accounts</div></a>
 			</rd-widget-body>
 		</rd-widget>
 	</div>
@@ -20,10 +16,10 @@
 		<rd-widget>
 			<rd-widget-body>
 				<div class="widget-icon red pull-left">
-					<i class="fa fa-tasks"></i>
-				</div>
+					<i class="fa fa-th-list"></i>
+				</div><a href="#/#creditblock">
 				<div class="title">2</div>
-				<div class="comment">Credit Cards</div>
+				<div class="comment">Credit Cards</div></a>
 			</rd-widget-body>
 		</rd-widget>
 	</div>
@@ -31,10 +27,10 @@
 		<rd-widget>
 			<rd-widget-body>
 				<div class="widget-icon orange pull-left">
-					<i class="fa fa-sitemap"></i>
-				</div>
+					<i class="fa fa-exchange"></i>
+				</div><a href="#/#loanblock">
 				<div class="title">1</div>
-				<div class="comment">Loan</div>
+				<div class="comment">Loan</div></a>
 			</rd-widget-body>
 		</rd-widget>
 	</div>
@@ -42,17 +38,17 @@
 		<rd-widget>
 			<rd-widget-body>
 				<div class="widget-icon blue pull-left">
-					<i class="fa fa-support"></i>
-				</div>
+					<i class="fa fa-paperclip"></i>
+				</div><a href="#/#docblock">
 				<div class="title">17</div>
-				<div class="comment">Documents</div>
+				<div class="comment">Documents</div></a>
 			</rd-widget-body>
 		</rd-widget>
 	</div>
 </div>
 
 <div class="row">
-	<div class="col-lg-6">
+	<div class="col-lg-6" id="accountblock">
 		<rd-widget>
       		<rd-widget-header icon="fa-tasks" title="Account List">
 				
@@ -61,18 +57,18 @@
 				<div class="table-responsive">
 					<table class="table">
 						<tbody>
-							<tr><td>Ted's Checking</td><td>$2,122.12</td><td><span class="text-success"><i class="fa fa-arrow-circle-o-up"></i></span></td></tr>
-							<tr><td>Family Checking</td><td>$1,567.23</td><td><span class="text-success"><i class="fa fa-arrow-circle-o-up"></i></span></td></tr>
-							<tr><td>Emergency Fund</td><td>$5000.00</td><td><span tooltip="Server Down!"><i class="fa fa-arrow-circle-o-up"></i></span></td></tr>
-							<tr><td>LT Savings</td><td>$13,002.28</td><td><span class="text-success"><i class="fa fa-arrow-circle-o-up"></i></span></td></tr>
-							<tr><td>Kids College</td><td>$8,270.89</td><td><span class="text-success"><i class="fa fa-arrow-circle-o-up"></i></span></td></tr>
+							<tr><td><a href="#/tables">Ted's Checking</a></td><td>$2,122.12</td><td><span class="text-success"><i class="fa fa-arrow-circle-o-up"></i></span></td></tr>
+							<tr><td><a href="#/tables">Family Checking</a></td><td>$1,567.23</td><td><span class="text-success"><i class="fa fa-arrow-circle-o-up"></i></span></td></tr>
+							<tr><td><a href="#/tables">Emergency Fund</a></td><td>$5000.00</td><td><span tooltip="Server Down!"><i class="fa fa-arrow-circle-o-up"></i></span></td></tr>
+							<tr><td><a href="#/tables">LT Savings</a></td><td>$13,002.28</td><td><span class="text-success"><i class="fa fa-arrow-circle-o-up"></i></span></td></tr>
+							<tr><td><a href="#/tables">Kids College</a></td><td>$8,270.89</td><td><span class="text-success"><i class="fa fa-arrow-circle-o-up"></i></span></td></tr>
 						</tbody>
 					</table>
 				</div>
 			</rd-widget-body>
 		</rd-widget>
 	</div>
-	<div class="col-lg-6">
+	<div class="col-lg-6" id="docblock">
 		<rd-widget>
 			<rd-widget-header icon="fa-users" title="Popular Documents">
 				<input type="text" placeholder="Search" class="form-control input-sm" />
@@ -96,29 +92,34 @@
 </div>
 
 <div class="row">
-	<div class="col-lg-6">
+	<div class="col-lg-6" id="creditblock">
    		<rd-widget>
-   			<rd-widget-header icon="fa-plus" title="Extras">
-   				<button class="btn btn-sm btn-info">Button</button>
+   			<rd-widget-header icon="fa-plus" title="Credit Cards">
+   				<button class="btn btn-sm btn-info">Pay Bills</button>
    			</rd-widget-header>
    			<rd-widget-body>
-				<div class="message">
-					This is a standard message which will also work the ".no-padding" class, I can also <span class="error">be an error message!</span>
-				</div>
-				<hr />
-				<div class="message">
-					<a href="http://angular-ui.github.io/bootstrap/" target="_blank">UI Bootstrap</a> is included, so you can use <a href="#" tooltip="I'm a tooltip!">tooltips</a> and all of the other native Bootstrap JS components!
-				</div>
+<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr><th class="text-center">Card</th><th>Min. Payment</th><th>Balance</th><th>Account #</th></tr>
+						</thead>
+						<tbody>
+							<tr><td class="text-center">Master Card</td><td>$126</td><td>$1,100.45</td><td>8434-xxxx-xxxx</td></tr>
+							<tr><td class="text-center">American Express</td><td>$26</td><td>$206.23</td><td>12343-XX-XXXX</td></tr>
+						</tbody>
+					</table>
+        		</div>
+
    			</rd-widget-body>
    		</rd-widget>
 	</div>
-	<div class="col-lg-6">
+	<div class="col-lg-6" id="loanblock">
 		<rd-widget>
-			<rd-widget-header icon="fa-cog fa-spin" title="Loading Directive">
-				<a href="http://tobiasahlin.com/spinkit/" target="_blank">SpinKit</a>
+			<rd-widget-header icon="fa-cog fa-spin" title="Loans">
+				<button class="btn btn-sm btn-info">Pay Bills</button>
 			</rd-widget-header>
 			<rd-widget-body>
-				<rd-loading></rd-loading>
+				<rd-loading>Loading Loans</rd-loading>
 			</rd-widget-body>
 		</rd-widget>
 	</div>
