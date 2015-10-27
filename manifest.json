@@ -1,0 +1,39 @@
+{
+  "start_url": "https://bancocontoso.azurewebsites.net",
+  "short_name": "Bank of Contoso",
+  "icons": [
+    {
+      "src": "http://bancocontoso.azurewebsites.net/images/logo.png",
+      "sizes": "150x150"
+    },
+        {
+      "src": "http://bancocontoso.azurewebsites.net/images/storelogo.png",
+      "sizes": "50x50"
+    },
+        {
+      "src": "http://bancocontoso.azurewebsites.net/images/smalllogo.png",
+      "sizes": "30x30"
+    },
+        {
+      "src": "http://bancocontoso.azurewebsites.net/images/logo44.png",
+      "sizes": "44x44"
+    },    {
+      "src": "http://bancocontoso.azurewebsites.net/images/splashscreen.png",
+      "sizes": "620x300"
+    }
+  ],
+    "splash_screens": [
+    {
+      "src": "http://bancocontoso.azurewebsites.net/images/splashscreen.png",
+      "sizes": "620x300"
+    }
+    ],
+  "mjs_access_whitelist": [
+      {
+          "url": "https://bancocontoso.azurewebsites.net", "apiAccess":"all"
+      }
+  ],
+  "display": "standalone",
+  "name": "Bank of Contoso",
+  "theme_color": "#30426A"
+}
