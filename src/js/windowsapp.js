@@ -7,11 +7,45 @@
 
 if(window.Windows){
 	
-	console.log('this printed from the file@')
+            function ScanCheck() {
+            var camera = new Windows.Media.Capture.CameraCaptureUI();
+            camera.captureFileAsync(Windows.Media.Capture.CameraCaptureUIMode.photo).then(function (result) {
+                if (result) {
+                    var photoBlobUrl = URL.createObjectURL(result, { oneTimeOnly: true });
+                    var img = new Image();
+                    img.src = photoBlobUrl;
+                document.getElementById('placeholderCheck').appendChild(img);
+                    document.getElementById('btnUpload').style.display = "";
+                }
+            });
+        }
+        
+        function UploadCheck() {
+        var username = "BobBarker" + Math.random();
+        
+            var keycredentialmanager = Windows.Security.Credentials.KeyCredentialManager;
+            keycredentialmanager.isSupportedAsync().done(function (result) {
+                if (result == true) {
+                    var retreivalstatus = keycredentialmanager.openAsync(username).done(function (result) {
+                        if (result.status == 2) {
+                        var keycreationresult = keycredentialmanager.requestCreateAsync(username,
+                                Windows.Security.Credentials.KeyCredentialCreationOption.replaceExisting).done(function (result) {
+                                    if (result.status == 0) {
+                                        // Credentials are correct
+                                        document.getElementById('statusUpload').textContent = "Done! The check has been sent to your bank.";
+                                        document.getElementById('btnUpload').style.display = "none";                                
+                                    } 
+                                });
+                        }
+                    });
+                }
+            });
+        }
+
 
 
    setTimeout(function(){ document.getElementById('onlyWindows').style.display = '';},1000);
-
+setTimeout(function(){ document.getElementById('onlyWindows2').style.display = '';},1000);
 function createToast(title, message, imgUrl, imgAlt, tag, lang) {
 	    
     // Namespace: Windows.UI.Notifications
