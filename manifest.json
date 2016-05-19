@@ -1,6 +1,6 @@
 
 {
-  "start_url": "https://bancocontoso.azurewebsites.net",
+  "start_url": "http://bancocontoso.azurewebsites.net",
   "short_name": "Bank of Contoso",
   "icons": [
     {
@@ -29,7 +29,7 @@
       "sizes": "620x300"
     }
     ],
-  "scope":"https://bancocontoso.azurewebsites.net",
+  "scope":"http://bancocontoso.azurewebsites.net",
   "name": "Bank of Contoso",
   "theme_color": "#30426A",
   "mjs_api_access": [
