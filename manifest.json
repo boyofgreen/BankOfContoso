@@ -33,7 +33,6 @@
   "name": "Bank of Contoso",
   "theme_color": "#30426A",
   "mjs_api_access": [
-  { "match": "*", "access": "cordova", "platform": "ios,android" },
   { "match": "*", "access": "all", "platform": "windows10" }
 
 ]
