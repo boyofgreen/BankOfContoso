@@ -1,0 +1,168 @@
+body {
+    background: #30426a;
+    border-top: 6px solid #2d3e63;
+    font-family: Montserrat;
+    
+}
+
+header {
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#2d3e63 ;
+    color: white;
+    flex-direction: column;
+font-size: 2em;
+
+
+}
+
+
+/* Set the reset button at the lower right corner of the page */
+#reset {
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+}
+
+#hello_logo {
+    width: 4.2rem;
+    height: 3.7rem;
+}
+
+#button-sign-in-with-password{
+    background-color: #778899;
+}
+
+/* override demo template */
+
+p {
+    margin-top: 1rem;
+}
+
+
+/* override demo template */
+
+a {
+    background-color: #d3a938;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+a:visited {
+    color: #fff;
+}
+
+.logo {
+    max-width: 22rem;
+}
+
+.login-background {
+
+}
+
+.nav-top {
+    padding: .4rem 1rem;
+    margin-top: 0rem;
+    background-color: #d3a938;
+    color: #fff;
+}
+
+.container {
+    margin-top: 14rem;
+}
+
+
+/* Overwrite section class margin */
+
+.section {
+    margin-top: 0;
+}
+
+.content {
+    display: flex;
+    margin: 0 auto;
+    max-width: 100rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.content img {
+    margin: 0 auto;
+}
+
+.sub-content {
+    width: 43rem;
+    background-color: hsla(0, 0%, 86%, .9);
+    margin: 0 auto;
+    padding: 2rem 3rem;
+}
+
+.login-container {
+    max-width: 48rem;
+    position: relative;
+    top: 14rem;
+    margin: 0 auto;
+    padding: 3rem;
+    xtext-align: center;
+    background-color: hsla(0, 0%, 86%, .9);
+}
+
+.login-container button{
+    margin:10px 0;
+}
+
+input,
+select,
+textarea {
+    border: none;
+    background-color: hsla(0, 0%, 100%, .4);
+    width: 100%;
+}
+
+input,
+select,
+textarea {
+    border-bottom: 4px solid #d3a938;
+    padding: .4rem .8rem;
+}
+
+input:focus {
+    border-bottom: 4px solid hsla(327, 100%, 12%, .8);
+}
+
+button,
+input[type=button] {
+    width: 100%;
+    background-color: #d3a938;
+}
+
+.button:link,
+.button:visited,
+button,
+input[type="button"] {
+    color: #fff;
+    border: 1px;
+    padding:5px;
+    margin:10px;
+}
+
+.video {
+    max-width: 48rem;
+    min-height: 15rem;
+    position: relative;
+    top: 12rem;
+    margin: 0 auto;
+    padding: 0rem;
+    text-align: center;
+    background: #EEEFF1;
+    border: 2px solid #D2CCCC;
+    border-bottom: 0px;
+}
+
+.video-icon {
+    max-width: 15rem;
+    margin: 5rem;
+}

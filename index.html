@@ -1,136 +1,78 @@
-<!doctype html>
-<html lang="en" ng-app="RDash">
+<!DOCTYPE html>
+<html lang="EN-US" dir="ltr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
+    <title>Sign in to your Microsoft account</title>
 
-	<title>Bank of Contoso [savings, loans, credit]</title>
-  <script src="https://vorlondavca.azurewebsites.net/vorlon.max.js"></script>
-  <link rel="manifest" href="manifest.json">
-  <!-- STYLES -->
-  <link rel="stylesheet" href="lib/css/main.min.css"/>
-  <!-- SCRIPTS -->
-  <script src="lib/js/main.min.js"></script>
-  <!-- Custom Scripts -->
-  <script type="text/javascript" src="js/dashboard.min.js"></script>
-   
+        <link rel="stylesheet" type="text/css" href="lib/css/main.min.css">
+    <xlink rel="stylesheet" type="text/css" href="https://edgeportal.blob.core.windows.net/media/demotemplate.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <meta name="GENERATOR" content="MSHTML 11.00.10537.1000">
 </head>
-<body ng-controller="MasterCtrl">
-  <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
 
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-      <ul class="sidebar">
-        <li class="sidebar-main">
-          <a ng-click="toggleSidebar()">
-            Bank of Contoso
-            <span class="menu-icon glyphicon glyphicon-transfer"></span>
-          </a>
-        </li>
-        <li class="sidebar-title"><span>Acount info</span></li>
-        <li class="sidebar-list">
-          <a href="#">My Accounts <span class="menu-icon fa fa-tachometer"></span></a>
-        </li>
-        <li class="sidebar-list">
-          <a href="#/tables">favorites <span class="menu-icon fa fa-table"></span></a>
-        </li>
-        <li class="sidebar-list onlyWindows" id="onlyWindows" style="display:none">
-          <a href="#/tables">Bill Pay <span class="menu-icon fa fa-table"></span></a>
-        </li>
-        <li class="sidebar-list onlyWindows" id="onlyWindows2" style="display:none">
-          <a href="#/checks">Check Upload<span class="menu-icon fa fa-bell-o"></span></a>
-       </li>
-
-      </ul>
-      <div class="sidebar-footer">
-        <div class="col-xs-4">
-          <a href="https://github.com/rdash/rdash-angular" target="_blank">
-            Github
-          </a>
+<body class="login-background">
+    <header>
+        <p>Bank of Contoso</p>
+    </header>
+    <div class="centerParent" id="shellTD">
+        <div class="center" id="shellTBL">
+            <div class="centerParent">
+                <div class="center" id="mainTD">
+                    <div class="login-container" id="signInTD">
+                        <div class="signInHeader" id="i0272">
+                            <h1>Sign in</h1>
+                        </div>
+                        <div id="rightTD">
+                            <!-- removing the form to prevent 405 errors when clicking the sign-in button-->
+                            <div id="idDiv_FSI_HeaderInfo">
+                                <p class="subtitle">Please sign in to access your account.</p>
+                            </div>
+                            <div class="section">
+                                <div id="idTd_Tile_Error" aria-live="assertive" aria-relevant="text" style="display: none;" aria-atomic="true">
+                                    <div class="errorDiv" id="idTd_Tile_ErrorMsg_Login"></div>
+                                </div>
+                                <div class="row textbox" id="idDiv_PWD_UsernameTb">
+                                    <div>
+                                        <input name="loginfmt" id="credentialIdTextBox" aria-describedby="idTd_Tile_Error idTd_PWD_Error" aria-labelledby="idLbl_PWD_Username" lang="en" type="email" maxlength="113" placeholder="Email or phone" value="JohnDoe@outlook.com">
+                                    </div>
+                                </div>
+                                <div class="row textbox" id="idDiv_PWD_SUPasswordTb">
+                                    <div>
+                                        <input name="passwd" id="input-password" aria-labelledby="idInput-password" type="password" maxlength="127" placeholder="Password" autocomplete="off" value="password" style="display: none;">
+                                    </div>
+                                </div>
+                                <div id="idTd_HIP_Error_Password" aria-live="assertive" aria-relevant="text" style="display: none;" aria-atomic="true">
+                                    <div class="errorDiv" id="idTd_PWD_ErrorMsg_Password"></div>
+                                </div>
+                                <div class="row textbox" id="idDiv_PWD_SUPasswordTb">
+                                </div>
+                            </div>
+                            <div class="section">
+                                <button class="default" id="button-logon-with-password" onclick="signInAndRegister()" style="display: none;">Sign In</button>
+                                <button class="default" id="button-logon-with-windows-hello" onclick="getAssertion()" style="display: none;">Sign In with Windows Hello</button>
+                            </div>
+                            <div class="row small" id="register">
+                                <button id="button-sign-in-with-password" onclick="addPasswordField();" style="display: none;">Sign in with a password</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-xs-4">
-          <a href="https://github.com/rdash/rdash-angular/README.md" target="_blank">
-            About
-          </a>
-        </div>
-        <div class="col-xs-4">
-          <a href="#">
-            Support
-          </a>
-        </div>
-      </div>
     </div>
-    <!-- End Sidebar -->
-
-    <div id="content-wrapper">
-      <div class="page-content">
-
-        <!-- Header Bar -->
-        <div class="row header">
-          <div class="col-xs-12">
-            <div class="user pull-right">
-              <div class="item dropdown">
-                <a href="#" class="dropdown-toggle">
-                  <img src="img/avatar.jpg">
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class="dropdown-header">
-                    Contact Ino
-                  </li>
-                  <li class="divider"></li>
-                  <li class="link">
-                    <a href="#">
-                      Profile
-                    </a>
-                  </li>
-                  <li class="link">
-                    <a href="#">
-                      Contact Us
-                    </a>
-                  </li>
-                  <li class="divider"></li>
-                  <li class="link">
-                    <a href="#">
-                      Logout
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="item dropdown">
-               <a href="#" class="dropdown-toggle">
-                  <i class="fa fa-bell-o"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li class="dropdown-header">
-                    Notifications
-                  </li>
-                  <li class="divider"></li>
-                  <li>
-                    <a href="#">update contact information</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="meta">
-              <div class="page">
-                Bank of Contoso
-              </div>
-              <div class="breadcrumb-links">
-                Welcome Alfred Koholic
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Header Bar -->
-
-        <!-- Main Content -->
-        <div ui-view></div>
-
-      </div><!-- End Page Content -->
-    </div><!-- End Content Wrapper -->
-  </div><!-- End Page Wrapper -->
-
- <script src="/js/android-ios.js"></script>
+    <footer id="reset">
+        <button class="reset-button" id="link-reset-session" onclick="resetPage()" style="display: inline;">Reset session</button>
+    </footer>
+    <!-- Include localforage, a polyfill for indexedDB -->    
+    <script src="./js/localforage.js"></script>
+    <!-- Polyfill for the WebAuthN API. The polyfill maps WebAuthN calls to msCredentials !--> 
+    <script src="./js/webauthn.js"></script>
+    <script src="./js/updateui.js"></script>
+    <script src="./js/demo.js"></script>
 </body>
+
 </html>
