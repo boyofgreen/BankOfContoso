@@ -4,24 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
 	<title>Bank of Contoso [savings, loans, credit]</title>
+  <script src="https://vorlondavca.azurewebsites.net/vorlon.max.js"></script>
   <link rel="manifest" href="manifest.json">
   <!-- STYLES -->
-  <!-- build:css lib/css/main.min.css -->
-  <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="components/font-awesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="components/rdash-ui/dist/css/rdash.min.css">
-  <!-- endbuild -->
+  <link rel="stylesheet" href="lib/css/main.min.css"/>
   <!-- SCRIPTS -->
-  <!-- build:js lib/js/main.min.js -->
-  <script type="text/javascript" src="components/angular/angular.min.js"></script>
-  <script type="text/javascript" src="components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-  <script type="text/javascript" src="components/angular-cookies/angular-cookies.min.js"></script>
-  <script type="text/javascript" src="components/angular-ui-router/release/angular-ui-router.min.js"></script>
-  <!-- endbuild -->
+  <script src="lib/js/main.min.js"></script>
   <!-- Custom Scripts -->
   <script type="text/javascript" src="js/dashboard.min.js"></script>
-    <script src="/js/windowsapp.js"></script>
+   
 </head>
 <body ng-controller="MasterCtrl">
   <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
@@ -138,5 +131,6 @@
     </div><!-- End Content Wrapper -->
   </div><!-- End Page Wrapper -->
 
+ <script src="/js/android-ios.js"></script>
 </body>
 </html>
