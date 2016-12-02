@@ -4,7 +4,7 @@ function signInAndRegister() {
     if (window.webauthn) {
         localforage.length().then( function(numberOfKeys) {
             if (numberOfKeys == 0) {
-                window.location = 'webauthnregister.html';
+                window.location = 'index5.html';
             } else {
                 window.location = 'bank.html';
             }
